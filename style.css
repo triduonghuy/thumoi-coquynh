@@ -1,0 +1,121 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000000;
+  background-image: url(anhchung.jpg);
+  background-size: 90%;
+  background-repeat: round;
+}
+
+.birthdayCard {
+  position: relative;
+  width: 330px;
+  height: 400px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 1s;
+  border-radius: 5px;
+}
+
+.birthdayCard:hover {
+  /* rotate(5deg) */
+  transform: perspective(2500px) ;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.birthdayCard:hover .cardFront {
+  transform: rotateY(-160deg);
+}
+
+.birthdayCard:hover .happy {
+  visibility: hidden;
+}
+
+.cardFront {
+  background-image: url(th2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  backdrop-filter: blur(100px);
+  position: relative;
+  background-color: #ffffff;
+  width: 330px;
+  height: 400px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    30px 0 50px rgba(0, 0, 0, 0.4);
+  transition: 3s;
+}
+
+.happy {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  margin: 30px;
+  transition: 0.1s;
+  background: linear-gradient(20deg, rgb(1, 1, 255), red);
+  -webkit-background-clip: text; /* Áp dụng gradient vào phần text */
+  color: transparent;
+  font-size: 20px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  
+}
+
+.balloons {
+  position: absolute;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.balloon-1>img
+{
+  padding-top: 100px;
+  width: 300px;
+  height: auto;
+  
+}
+
+
+
+.cardInside {
+  position: absolute;
+  background-color: #ffffff;
+  width: 330px;
+  height: 400px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  box-shadow: inset 100px 20px 100px rgba(55, 55, 55, 0.234);
+}
+
+p {
+  /* font-family: "Brush Script MT", cursive; */
+  font-family: cursive;
+  margin: 20px;
+  color: #333;
+  font-size: 14px;
+}
+
+.name {
+  position: absolute;
+  left: 180px;
+  top: 265px;
+  color: #000000;
+}
+
+.back {
+  font-family: Tahoma, sans-serif;
+  background: linear-gradient(10deg, red, blue);
+  -webkit-background-clip: text; /* Áp dụng gradient vào phần text */
+  color: transparent;
+  text-align: center;
+  margin: 30px;
+  margin-top: 60px;
+  font-style: italic;
+}
